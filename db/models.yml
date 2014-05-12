@@ -1,0 +1,10 @@
+
+Book:
+   - author: string
+   - title: string
+   - price: integer
+
+Review:
+   - book_id: integer
+   - rating: integer
+   - review: string
