@@ -1,7 +1,13 @@
 Homework::Application.routes.draw do
 
-  get 'dice/roll' => 'dice/roll/index'
-  get 'books/list' => 'books/list/index'
+    get '/dice/roll'
+  get '/book' => 'book/list'
+  get '/book/:id' => 'book/show'
+  get '/' => "book/index"
+
+end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,4 +62,4 @@ Homework::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

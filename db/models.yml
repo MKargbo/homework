@@ -1,10 +1,14 @@
 
 Book:
-   - author: string
-   - title: string
-   - price: integer
+  - title: string
+  - author_id: integer
+  - price: integer
+  - averating: decimal
+
+Author:
+  - name: string
 
 Review:
-   - book_id: integer
-   - rating: integer
-   - review: string
+  - book_id: integer
+  - stars: integer
+  - review: text

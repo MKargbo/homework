@@ -11,18 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140512163242) do
+ActiveRecord::Schema.define(version: 20140512201603) do
+
+  create_table "authors", force: true do |t|
+    t.string "name"
+  end
 
   create_table "books", force: true do |t|
-    t.string  "author"
     t.string  "title"
     t.integer "price"
+    t.integer "author_id"
+    t.decimal "averating"
   end
 
   create_table "reviews", force: true do |t|
     t.integer "book_id"
-    t.integer "rating"
-    t.string  "review"
+    t.text    "review",  limit: 255
+    t.integer "stars"
   end
 
 end
